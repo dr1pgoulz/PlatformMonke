@@ -12,4 +12,4 @@ Compress-Archive -Path  "./libs/arm64-v8a/libplatformmonke.so",`
                         "./cover.png",`
                         "./mod.json" -DestinationPath "./platformMonke.zip" -Update 
 
-& copy-item -Force "./PlatformMonke.zip" "./PlatformMonke.qmod"
+& copy-item -Force "./PlatformMonke.zip" "./PlatformMonke-1.1.0.qmod"
