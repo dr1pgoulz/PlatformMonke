@@ -25,9 +25,15 @@ void SaveConfig()
     
     getConfig().config.AddMember("leftPlatSize", config.leftPlatSize, allocator);
     getConfig().config.AddMember("rightPlatSize", config.rightPlatSize, allocator);
-    getConfig().config.AddMember("leftColor", config.leftColor, allocator);
-    getConfig().config.AddMember("rightColor", config.rightColor, allocator);
+    if (config.leftColor != 11) {
+        getConfig().config.AddMember("leftColor", config.leftColor, allocator);
+    }
+    if (config.rightColor != 11) {
+        getConfig().config.AddMember("rightColor", config.rightColor, allocator);
+    }
     getConfig().config.AddMember("enabled", config.enabled, allocator);
+    getConfig().config.AddMember("onRelease", config.onRelease, allocator);
+    getConfig().config.AddMember("stickPlat", config.stickPlat, allocator);
     getConfig().Write();
     INFO("Saved Configuration!");
 }
@@ -59,6 +65,16 @@ bool LoadConfig()
     }
     if(doc.HasMember("enabled") && doc["enabled"].IsBool()) {
         config.enabled = doc["enabled"].GetBool();
+    } else {
+        foundEverything = false;
+    }
+    if(doc.HasMember("onRelease") && doc["onRelease"].IsBool()) {
+        config.onRelease = doc["onRelease"].GetBool();
+    } else {
+        foundEverything = false;
+    }
+    if(doc.HasMember("stickPlat") && doc["stickPlat"].IsBool()) {
+        config.stickPlat = doc["stickPlat"].GetBool();
     } else {
         foundEverything = false;
     }
