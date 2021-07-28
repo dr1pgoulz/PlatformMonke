@@ -4,14 +4,28 @@
   "info": {
     "name": "Platform Monke",
     "id": "platformmonke",
-    "version": "0.1.0",
+    "version": "2.0.0",
     "url": null,
     "additionalData": {}
   },
   "dependencies": [
     {
       "id": "beatsaber-hook",
-      "versionRange": "1.3.5",
+      "versionRange": "^2.0.0",
+      "additionalData": {
+        "extraFiles": [
+          "src/inline-hook"
+        ]
+      }
+    },
+    {
+      "id": "custom-types",
+      "versionRange": "*",
+      "additionalData": {}
+    },
+    {
+      "id": "quest-cosmetic-loader",
+      "versionRange": "*",
       "additionalData": {}
     },
     {
@@ -21,16 +35,6 @@
     },
     {
       "id": "monkecomputer",
-      "versionRange": "*",
-      "additionalData": {}
-    },
-    {
-      "id": "custom-types",
-      "versionRange": "^0.8.3",
-      "additionalData": {}
-    },
-    {
-      "id": "gorilla-utils",
       "versionRange": "*",
       "additionalData": {}
     }
