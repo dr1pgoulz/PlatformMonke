@@ -6,6 +6,8 @@ struct config_t {
     int leftColor = 0;
     int rightColor = 0;
     bool enabled = false;
+    bool onRelease = true;
+    bool stickPlat = false;
 };
 
 extern config_t config;
