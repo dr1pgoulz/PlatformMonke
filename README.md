@@ -5,10 +5,3 @@ a platform will appear under your hand.**
 
 
 ###### Quest Port of Air Jump by fchb1239
-
-###### Ignore the mess in main.cpp, ill clean it soon.
- 
- 
- 
- 
-###### dont edit my mod to work in public lobbies. thats fuckin cringe mate.
